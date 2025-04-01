@@ -1,12 +1,12 @@
 // INFORMAZIONI
 
-const distance = parseInt(prompt("Quanti Km vuoi percorrere?", 50));
+const distance = parseInt(prompt("Quanti Km vuoi percorrere?", "50"));
 console.log("distance", distance);
 
-const ages = parseInt(prompt("Quanti anni hai?", 18));
+const ages = parseInt(prompt("Quanti anni hai?", "18"));
 console.log("ages", ages);
 
-let kmPrice = 0.21;
+const kmPrice = 0.21;
 
 const price = distance * kmPrice;
 console.log("price", price);
@@ -20,7 +20,7 @@ console.log("final20", final20);
 const final40 = price - discount40;
 console.log("final40", final40);
 
-let outputText = price;
+let outputText;
 
 // ALGORITMO
 
@@ -34,4 +34,4 @@ if (ages > 65) {
   outputText = final40;
 }
 
-alert("Il prezzo del biglietto è € " + outputText.toFixed(2));
+alert("Il prezzo del biglietto è €" + outputText.toFixed(2));
