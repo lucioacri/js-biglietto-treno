@@ -14,24 +14,19 @@ console.log("price", price);
 const discount20 = (price * 20) / 100;
 const discount40 = (price * 40) / 100;
 
-const final20 = price - discount20;
-console.log("final20", final20);
-
-const final40 = price - discount40;
-console.log("final40", final40);
-
 let outputText;
 
 // ALGORITMO
-
-if (ages < 18) {
-  outputText = final20;
-}
-if (ages >= 18) {
-  outputText = price;
-}
-if (ages > 65) {
-  outputText = final40;
+if (!isNaN(distance) && !isNaN(ages)) {
+  if (ages < 18) {
+    outputText = price - discount20;
+  } else if (ages > 65) {
+    outputText = price - discount40;
+  } else {
+    outputText = price;
+  }
+} else {
+  alert("Inserisci un numero");
 }
 
 alert("Il prezzo del biglietto è €" + outputText.toFixed(2));
